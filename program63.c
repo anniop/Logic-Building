@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int Sum(int iNo)
+int SumEven(int iNo)
 {
     
     
@@ -16,8 +16,10 @@ int Sum(int iNo)
     {
         
         iDigit = iNo% 10;       
-        
-        iSum = iSum + iDigit;
+        if(iDigit % 2 == 0)
+        {
+            iSum = iSum + iDigit;
+        }
         iNo = iNo/10;
         
                 
@@ -33,7 +35,7 @@ int main()
     int iRet = 0;
     printf("Enter Number : ");
     scanf("%d",&iValue);
-    iRet= Sum(iValue);
-    printf("%d addition \n",iRet);
+    iRet= SumEven(iValue);
+    printf("%d addition of even numbers  \n",iRet);
     return 0;
 }
