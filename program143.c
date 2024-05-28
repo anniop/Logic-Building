@@ -1,40 +1,30 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void Display(int iSize,int Arr[])
+void Swap(int *p, int *q)
 {
-    int i = 0;
-    printf("Elements in Reversed order are :  \n");
-    for(i = iSize-1;i>=0;i--)
-    {
-        printf("%d\n",Arr[i]);
-    }
-
-    
+    int temp = 0;
+    temp = *p;
+    *p = *q;
+    *q = temp;
 }
 
 int main()
-{
+{   
 
-    
-    int i =0;
-    int *Brr = NULL;
-    int iCount = 0;
+    int A = 0, B = 0;
 
-    printf("Enter Number of Elements that you want to enter : \n");
-    scanf("%d",&iCount);
+    printf("Enter First Number : \n");
+    scanf("%d",&A);
 
-    Brr = (int * )malloc(iCount * sizeof(int));
+    printf("Enter Second Number : \n");
+    scanf("%d",&B);
 
-    printf("Enter The Value of Elements : \n");
-    for(i = 0;i<iCount;i++)
-    {
-        scanf("%d",&Brr[i]);
-    }
-    Display(iCount,Brr);
+    Swap(&A,&B);
 
-    
+    printf("Value after Swapping of A is %d\n",A);
+    printf("Value after Swapping of B is%d\n",B);
 
-    free(Brr);
+
     return 0;
 }
