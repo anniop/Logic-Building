@@ -2,18 +2,18 @@
 #include<stdbool.h>
 int LastOccurence(char *str, char ch)    
 {
-    
-    int iCnt = 0;
+    int iCnt = 1;
+    int iPos = -1;
     while (*str != '\0')
     {
         if(*str == ch)
         {
-           iCnt++;
+           iPos = iCnt;
         }
-        
+        iCnt++;
         str++;
     }
-    return iCnt;
+    return iPos;
 }
 
 int main()
@@ -30,6 +30,13 @@ int main()
     
     iRet = LastOccurence(Arr, cValue);
 
-    printf("The Frequency is %d\n",iRet);
+    if(iRet == -1)
+    {
+        printf("The letter is not present in the string\n");
+    }
+    else
+    {
+    printf("The Last Occurence of the letter is %d\n",iRet);
+    }
     return 0;
 }
