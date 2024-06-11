@@ -3,10 +3,10 @@ using namespace std;
 
 class ArrayX
 {
-    public:
+    private:
         int *Arr;
         int iSize;
-
+    public:
         ArrayX(int iNo)
         {
             cout<<"Inside Constructor"<<endl;   

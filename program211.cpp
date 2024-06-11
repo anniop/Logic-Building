@@ -3,10 +3,10 @@ using namespace std;
 
 class ArrayX
 {
-    public:
+    private:
         int *Arr;
         int iSize;
-
+    public:
         ArrayX(int iNo)
         {
             cout<<"Inside Constructor"<<endl;   
@@ -37,6 +37,19 @@ class ArrayX
             cout<<Arr[i];
         }
     }
+    float Average()
+    {
+        int i = 0;
+        int iSum = 0;
+        float fAns = 0.0f;
+        for(i = 0;i< iSize ; i++)
+        {
+           
+            iSum = iSum + Arr[i];
+            
+        }
+        return ((float)iSum/(float)iSize);
+    }
 
 };
 
@@ -44,14 +57,14 @@ int main()
 {
     
     int iLength = 0;
-
+    float fRet = 0.0f;
     cout<<"Enter the number of elements that you want to store : "<<endl;
     cin>>iLength;
 
     ArrayX aobj(iLength);
     aobj.Accept();
     aobj.Display();
-
+    fRet = aobj.Average();
 
     return 0;
 }
