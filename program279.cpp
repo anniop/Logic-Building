@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int Addition(int iNo)
+void Display(int iNo)
 {
     int iDigit = 0;
     while(iNo != 0)
@@ -11,17 +11,15 @@ int Addition(int iNo)
         iNo = iNo/10;
 
     }
-    return iDigit;
 }
 
 int main()
 {
 
     int iValue = 0;
-    int iRet = 0;
     cout<<"Enter Value : "<<endl;
     cin>>iValue;
-    iRet = Addition(iValue);
+    Display(iValue);
     
 
     cout<<"End of Application"<<endl;
