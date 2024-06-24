@@ -14,9 +14,11 @@ typedef struct node **PPNODE;
 int main()
 {
 
-    struct node *Head = NULL;
+    PNODE Head = NULL;
+   // struct node *Head = NULL;
 
-    struct node obj;
+    NODE obj;
+    //struct node obj;
 
     return 0;
 }
