@@ -60,11 +60,11 @@ void ArrayX<T>::Display()
 int main()
 {
    
-    ArrayX <float>aobj(5);
-    aobj.Accept();
-    aobj.Display();
+    ArrayX<float> *aobj = new ArrayX<float>(5);
+    aobj->Accept();
+    aobj->Display();
     
-    cout<<"The Addition is : "<<aobj.Addition()<<"\n";
+    cout<<"The Addition is : "<<aobj->Addition()<<"\n";
 
     return 0;
 }
