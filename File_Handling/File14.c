@@ -4,11 +4,13 @@
 #include<fcntl.h>
 #include<string.h>
 
+#define BUFFER_SIZE 1024
+
 int main()
 {
     int fdRead = 0, fdWrite = 0;
     char FileName[30];
-    char Buffer[1024] = {'\0'};
+    char Buffer[BUFFER_SIZE] = {'\0'};
     int iRet = 0;
 
     printf("Enter the existinf file name : \n");
