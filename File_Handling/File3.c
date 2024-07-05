@@ -6,7 +6,7 @@
 int main()
 {
     
-    int fd = 0; // fd stands for file descriptor.
+    int fd = 0; 
     char FileName[30];
 
     printf("Enter the filename that you want to Open : \n");
