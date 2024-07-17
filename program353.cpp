@@ -19,6 +19,7 @@ public:
     void BubbleSort();
     void BubbleSortEfficient();
     void SelectionSort();
+    void InsertionSort();
 
 };
 
@@ -192,6 +193,23 @@ void ArrayX<T>::SelectionSort()
     }
 }
 
+template <class T>
+void ArrayX<T>::InsertionSort()
+{
+    int i = 0;
+    int j = 0;
+    T selected;
+
+    for(i = 1;i < iSize; i++)
+    {
+        for(j = i -1,selected = Arr[i];(j >=0) && (Arr[j] > selected); j--)
+        {
+            Arr[j + 1] = Arr[j];
+        }
+        Arr[j+1] = selected;
+    }
+}
+
 int main() 
 {
     int iLength = 0;
@@ -210,7 +228,7 @@ int main()
 
     aobj->Display();
     
-    aobj->SelectionSort();
+    aobj->InsertionSort();
 
     cout<<"\n";
 
