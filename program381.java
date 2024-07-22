@@ -1,6 +1,6 @@
 import java.util.*;
 
-class program380
+class program381
 {
     public static void main(String Google[])
     {
@@ -15,6 +15,20 @@ class program380
         char ch = s.charAt(0);
 
         System.out.println("Entered character is : "+ ch);
+
+        char Arr[] = str.toCharArray();
+        int iCnt = 0;
+        int i = 0;
+
+        for(i = 0;i < Arr.length;i++)
+        {
+            if(Arr[i] == ch)
+            {
+                iCnt++;
+            }
+        }
+
+        System.out.println("Frequency of that character is : "+iCnt);
 
     }    
 }

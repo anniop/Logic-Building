@@ -1,6 +1,6 @@
 import java.util.*;
 
-class program380
+class program384
 {
     public static void main(String Google[])
     {
@@ -9,12 +9,11 @@ class program380
         System.out.println("Enter String  : ");
         String str = sobj.nextLine(); 
 
-        System.out.println("Enter the character that you want to search : ");
-        String s = sobj.nextLine();
+        StringBuffer sb = new StringBuffer(str);
 
-        char ch = s.charAt(0);
+        sb = sb.reverse();
 
-        System.out.println("Entered character is : "+ ch);
+        System.out.println("The reversed string is : "+sb);
 
     }    
 }
